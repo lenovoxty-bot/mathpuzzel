@@ -28,7 +28,7 @@
             background-color: var(--dark-bg);
             color: var(--text-main);
             line-height: 1.7;
-            padding: 40px 20px;
+            padding: 20px 14px;
         }
 
         .container {
@@ -36,16 +36,15 @@
             margin: 0 auto;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 48px;
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+            padding: 24px;
         }
 
         .header {
             text-align: center;
             border-bottom: 1px solid var(--card-border);
-            padding-bottom: 30px;
-            margin-bottom: 35px;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .badge {
@@ -54,113 +53,83 @@
             color: var(--secondary);
             border: 1px solid rgba(56, 189, 248, 0.4);
             font-weight: 700;
-            font-size: 13px;
+            font-size: 12px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            padding: 6px 16px;
+            padding: 4px 14px;
             border-radius: 999px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         h1 {
-            font-size: 34px;
+            font-size: 26px;
             font-weight: 800;
-            letter-spacing: -0.5px;
             color: #ffffff;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .subtitle {
-            font-size: 15px;
+            font-size: 13px;
             color: var(--text-muted);
         }
 
         h2 {
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 700;
             color: var(--secondary);
-            margin: 32px 0 14px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            margin: 24px 0 10px 0;
         }
 
         p, ul {
-            font-size: 15px;
+            font-size: 14px;
             color: #cbd5e1;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         ul {
-            padding-left: 24px;
+            padding-left: 20px;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         a {
             color: var(--secondary);
             text-decoration: underline;
-            text-underline-offset: 3px;
-            transition: color 0.2s ease;
-        }
-
-        a:hover {
-            color: var(--primary-light);
         }
 
         .highlight-box {
             background: rgba(15, 23, 42, 0.6);
             border-left: 4px solid var(--primary);
-            border-radius: 0 12px 12px 0;
-            padding: 18px 22px;
-            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
         }
 
         .contact-box {
             background: rgba(99, 102, 241, 0.12);
             border: 1px solid rgba(99, 102, 241, 0.3);
-            border-radius: 14px;
-            padding: 24px;
-            margin-top: 36px;
+            border-radius: 12px;
+            padding: 18px;
+            margin-top: 24px;
             text-align: center;
         }
 
         .contact-box a {
             font-weight: 700;
-            font-size: 17px;
+            font-size: 15px;
             color: var(--accent);
             text-decoration: none;
         }
 
-        .contact-box a:hover {
-            text-decoration: underline;
-        }
-
         footer {
             text-align: center;
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-muted);
-            margin-top: 35px;
+            margin-top: 24px;
             border-top: 1px solid var(--card-border);
-            padding-top: 20px;
-        }
-
-        @media (max-width: 640px) {
-            body {
-                padding: 16px 12px;
-            }
-            .container {
-                padding: 24px 18px;
-                border-radius: 16px;
-            }
-            h1 {
-                font-size: 26px;
-            }
-            h2 {
-                font-size: 18px;
-            }
+            padding-top: 16px;
         }
     </style>
 </head>
@@ -168,7 +137,7 @@
 
 <div class="container">
     <div class="header">
-        <span class="badge">Legal & Privacy Policy</span>
+        <span class="badge">Privacy Policy</span>
         <h1>Math Puzzle</h1>
         <p class="subtitle">Effective Date: October 12, 2026 &bull; Version 3.0</p>
     </div>
@@ -176,10 +145,7 @@
     <section>
         <h2>1. Introduction</h2>
         <p>
-            Welcome to <strong>Math Puzzle</strong> ("we", "our", or "the App"). We are committed to protecting your privacy and providing a safe, transparent mobile gaming experience. This Privacy Policy explains what information is collected, how it is used, and how your privacy is respected when you download and play Math Puzzle.
-        </p>
-        <p>
-            By installing and using Math Puzzle, you consent to the practices described in this Privacy Policy.
+            Welcome to <strong>Math Puzzle</strong> ("we", "our", or "the App"). We are committed to protecting your privacy and providing a safe, transparent mobile gaming experience.
         </p>
     </section>
 
@@ -188,102 +154,60 @@
         <div class="highlight-box">
             <p><strong>Zero Account Registration Required:</strong></p>
             <p>
-                Math Puzzle does not require user accounts, emails, social logins, or passwords to play. We do not collect or store your name, phone number, address, financial records, or contacts on remote servers.
+                Math Puzzle does not require user accounts, emails, or logins. We do not collect or store personal identifiers, phone numbers, or passwords on remote servers.
             </p>
         </div>
     </section>
 
     <section>
-        <h2>3. Information Collected and Stored Locally</h2>
+        <h2>3. Local Device Data</h2>
         <p>
-            To deliver an uninterrupted puzzle experience, the App stores gameplay progress strictly locally on your device using Android SharedPreferences:
+            All gameplay state is stored exclusively on your device (Android SharedPreferences):
         </p>
         <ul>
-            <li><strong>Level Progress & Unlocks:</strong> Cleared levels (1 to 120) and unlocked stages.</li>
-            <li><strong>Scores & Stars:</strong> Stars collected per puzzle, completion times, and speed records.</li>
-            <li><strong>Brain IQ Score:</strong> Calculated IQ progression rating based on solved levels.</li>
-            <li><strong>Game Settings:</strong> Haptic vibration preferences and audio sound effects toggles.</li>
-            <li><strong>Hint Tokens:</strong> Remaining hint tokens inventory.</li>
+            <li>Cleared levels (1 to 500) and unlocked stages.</li>
+            <li>Stars collected, completion times, and speed rush records.</li>
+            <li>Brain IQ progression score.</li>
+            <li>Haptic vibration and audio sound preferences.</li>
+            <li>Hint tokens inventory.</li>
         </ul>
         <p>
-            <em>Note:</em> You can reset all local gameplay data at any time directly inside the App by visiting <strong>Settings &gt; Reset Progress</strong>.
+            You can clear all local data at any time via <em>Settings &gt; Reset Progress</em>.
         </p>
     </section>
 
     <section>
-        <h2>4. Third-Party Services & Advertising (Google AdMob)</h2>
+        <h2>4. Advertising (Google AdMob)</h2>
         <p>
-            Math Puzzle uses industry-standard third-party SDKs to facilitate app stability, display advertisements, and reward player engagement. These third-party services may collect automated telemetry and identifiers as governed by their respective privacy policies:
+            Math Puzzle displays ads via Google AdMob (banner ads, level completion interstitial ads, and optional rewarded video ads for hints).
+            AdMob may automatically collect device identifiers (such as Google Advertising ID), IP address, and diagnostic performance metrics.
         </p>
+        <p>
+            For more details, visit <a href="https://policies.google.com/technologies/ads">Google Ad Policies</a>.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Device Permissions</h2>
         <ul>
-            <li>
-                <strong>Google AdMob:</strong> Serves banner ads, interstitial level-transition ads, and optional rewarded video ads for in-game hint rewards.
-                AdMob may collect device advertising IDs (AAID), IP address, coarse location, device technical specifications, and ad performance metrics.
-                <br>
-                Privacy Policy: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Ad Policies</a> &bull;
-                <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">How AdMob uses data</a>
-            </li>
-            <li>
-                <strong>Google Play Services:</strong> Provides core Android runtime libraries and diagnostic capabilities.
-                <br>
-                Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
-            </li>
+            <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Needed by Google AdMob to load advertisements.</li>
+            <li><strong>VIBRATE:</strong> Used solely for optional tactile haptic feedback.</li>
         </ul>
     </section>
 
     <section>
-        <h2>5. Your Choices & Opting Out of Targeted Ads</h2>
+        <h2>6. Children's Privacy (COPPA)</h2>
         <p>
-            You have complete control over personalized advertising on your Android device:
-        </p>
-        <ul>
-            <li>
-                <strong>Reset or Delete Advertising ID:</strong> On your Android device, navigate to <strong>Settings &gt; Google &gt; Ads</strong> and choose <em>"Reset advertising ID"</em> or <em>"Delete advertising ID"</em>.
-            </li>
-            <li>
-                <strong>Opt Out of Interest-Based Advertising:</strong> You can turn off personalized ads through Google Ad Settings at <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">adssettings.google.com</a>.
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>6. Device Permissions</h2>
-        <p>
-            Math Puzzle requests only the minimal permissions required to function properly:
-        </p>
-        <ul>
-            <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Required by Google AdMob to load advertisements and check network reachability.</li>
-            <li><strong>VIBRATE:</strong> Used solely to provide optional tactile haptic feedback on button presses and puzzle solves (can be disabled in Settings).</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>7. Children's Privacy (COPPA Compliance)</h2>
-        <p>
-            Math Puzzle is a general audience arithmetic puzzle game. We do not knowingly collect personally identifiable information from children under the age of 13. All gameplay state remains solely on the device. Advertisements are configured to adhere to Google Play Families Policy guidelines.
-        </p>
-    </section>
-
-    <section>
-        <h2>8. Data Security</h2>
-        <p>
-            Because we do not operate external user account databases, your sensitive personal information is not stored or transmitted to external company servers. All network traffic generated by Google AdMob SDK operates over encrypted SSL/TLS (HTTPS) channels.
-        </p>
-    </section>
-
-    <section>
-        <h2>9. Changes to This Privacy Policy</h2>
-        <p>
-            We may occasionally update our Privacy Policy to reflect app updates, new features, or regulatory requirements. Any modifications will be posted here with an updated effective date.
+            Math Puzzle does not knowingly collect personal information from children under 13. All gameplay state remains solely on the device.
         </p>
     </section>
 
     <div class="contact-box">
-        <h3 style="color: #ffffff; margin-bottom: 8px;">Questions or Privacy Inquiries?</h3>
-        <p style="margin-bottom: 12px; color: var(--text-muted);">
-            If you have questions regarding this Privacy Policy or wish to exercise your privacy rights, please reach out directly:
+        <h3 style="color: #ffffff; margin-bottom: 6px;">Questions & Inquiries</h3>
+        <p style="margin-bottom: 10px; color: var(--text-muted); font-size: 13px;">
+            For privacy inquiries or support, contact us directly:
         </p>
-        <a href="mailto:lenovoxty@gmail.com">lenovoxty@gmail.com</a>
+        <a href="mailto:wa.game.spport@gmail.com">wa.game.spport@gmail.com</a>
     </div>
 
     <footer>
