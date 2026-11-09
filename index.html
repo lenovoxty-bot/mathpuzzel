@@ -15,6 +15,7 @@
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --accent: #f59e0b;
+            --emerald: #10b981;
         }
 
         * {
@@ -32,7 +33,7 @@
         }
 
         .container {
-            max-width: 860px;
+            max-width: 880px;
             margin: 0 auto;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -80,6 +81,13 @@
             margin: 24px 0 10px 0;
         }
 
+        h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin: 14px 0 6px 0;
+        }
+
         p, ul {
             font-size: 14px;
             color: #cbd5e1;
@@ -123,6 +131,14 @@
             text-decoration: none;
         }
 
+        code {
+            background: rgba(15, 23, 42, 0.8);
+            color: #f8fafc;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-size: 12.5px;
+        }
+
         footer {
             text-align: center;
             font-size: 12px;
@@ -137,75 +153,167 @@
 
 <div class="container">
     <div class="header">
-        <span class="badge">Privacy Policy</span>
+        <span class="badge">Legal &amp; Privacy Policy</span>
         <h1>Math Puzzle</h1>
-        <p class="subtitle">Effective Date: October 12, 2026 &bull; Version 3.0</p>
+        <p class="subtitle">Last Updated: November 8, 2026 &bull; Version 20.0 &bull; Package ID: <code>com.aistudio.mathpuzzle.nxvwzy</code></p>
     </div>
 
     <section>
-        <h2>1. Introduction</h2>
+        <h2>1. Introduction &amp; Overview</h2>
         <p>
-            Welcome to <strong>Math Puzzle</strong> ("we", "our", or "the App"). We are committed to protecting your privacy and providing a safe, transparent mobile gaming experience.
+            Welcome to <strong>Math Puzzle</strong> ("we", "our", or "the App"), an Android brain-training and mathematics puzzle application featuring 500 Math Puzzle levels, Daily Puzzle, Speed Rush, and the Number Merge mode. This Privacy Policy explains how information is collected, used, shared, and stored when you install and use Math Puzzle from Google Play.
         </p>
-    </section>
-
-    <section>
-        <h2>2. Data We Do NOT Collect</h2>
         <div class="highlight-box">
-            <p><strong>Zero Account Registration Required:</strong></p>
-            <p>
-                Math Puzzle does not require user accounts, emails, or logins. We do not collect or store personal identifiers, phone numbers, or passwords on remote servers.
-            </p>
+            <p><strong>Key Privacy Summary:</strong></p>
+            <ul>
+                <li><strong>No User Accounts Required:</strong> Math Puzzle does not require registration, sign-in, usernames, passwords, or social logins. We do not operate proprietary backend servers that store your personal contact details.</li>
+                <li><strong>Third-Party SDK Data Collection:</strong> While we do not collect personal contact details directly, the App integrates official Google SDKs—<strong>Google AdMob</strong> (for advertisements), <strong>Google Play Billing</strong> (for in-app purchases), and <strong>Google Play Core / In-App Review</strong>—which automatically collect and process certain device identifiers, advertising IDs, IP addresses, diagnostic data, and transaction/ad interaction records as described below.</li>
+                <li><strong>Local Gameplay Storage:</strong> All game progress, Stars, Number Merge state, hints, and settings are stored locally on your device.</li>
+            </ul>
         </div>
     </section>
 
     <section>
-        <h2>3. Local Device Data</h2>
+        <h2>2. Information Stored Locally on Your Device</h2>
         <p>
-            All gameplay state is stored exclusively on your device (Android SharedPreferences):
+            To provide seamless offline and online gameplay, Math Puzzle stores your game state locally on your device using Android <code>SharedPreferences</code> (<code>math_puzzle_prefs</code> and <code>number_merge_prefs</code>):
         </p>
         <ul>
-            <li>Cleared levels (1 to 500) and unlocked stages.</li>
-            <li>Stars collected, completion times, and speed rush records.</li>
-            <li>Brain IQ progression score.</li>
-            <li>Haptic vibration and audio sound preferences.</li>
-            <li>Hint tokens inventory.</li>
+            <li><strong>500 Math Puzzle Levels &amp; Star Progression:</strong> Unlocked levels (1 to 500), completed levels, per-level Star ratings (1 to 3 Stars), one-time doubled Star reward claims (1&rarr;2, 2&rarr;4, 3&rarr;6 Stars), cumulative lifetime Stars, and best level completion times.</li>
+            <li><strong>Number Merge Game Mode:</strong> Permanent unlock status (automatically unlocked at 500 cumulative Stars), saved 5&times;8 (40-tile) board matrix, current score, high score, continuous target progression (512, 1024, 2048, 4096, 8192, and beyond), completed target milestones, and permanently eliminated tile numbers (from target 2048 onward).</li>
+            <li><strong>Special Modes &amp; Brain IQ Stats:</strong> Daily Puzzle participation, Speed Rush high score records, and calculated Brain IQ progression score.</li>
+            <li><strong>Shared Hint Wallet &amp; Purchase Entitlements:</strong> Available hint token balance (starting with 3 free hints for new players), Lifetime Ad-Free ownership status, and processed Google Play purchase tokens (stored locally to prevent duplicate crediting of consumable hint packs).</li>
+            <li><strong>Audio, Haptics &amp; Review Cooldown Preferences:</strong> Sound effects toggle, background music toggle and volume level, haptic vibration preference, and the timestamp and level count of the last Google Play In-App Review prompt.</li>
         </ul>
         <p>
-            You can clear all local data at any time via <em>Settings &gt; Reset Progress</em>.
+            <strong>Android Auto Backup:</strong> Standard Android system backup (<code>android:allowBackup="true"</code>) may back up your local app preferences to your Google account's device backup if enabled in your Android system settings. You can clear all local gameplay progress at any time via <strong>Settings &gt; Reset Progress</strong> inside the App, or by clearing the App's storage in Android Settings.
         </p>
     </section>
 
     <section>
-        <h2>4. Advertising (Google AdMob)</h2>
+        <h2>3. Advertising &amp; Rewarded Ads (Google AdMob)</h2>
         <p>
-            Math Puzzle displays ads via Google AdMob (banner ads, level completion interstitial ads, and optional rewarded video ads for hints).
-            AdMob may automatically collect device identifiers (such as Google Advertising ID), IP address, and diagnostic performance metrics.
+            Math Puzzle uses the <strong>Google Mobile Ads SDK (Google AdMob)</strong> to display advertisements. Ad formats in the App include:
         </p>
-        <p>
-            For more details, visit <a href="https://policies.google.com/technologies/ads">Google Ad Policies</a>.
-        </p>
-    </section>
-
-    <section>
-        <h2>5. Device Permissions</h2>
         <ul>
-            <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Needed by Google AdMob to load advertisements.</li>
-            <li><strong>VIBRATE:</strong> Used solely for optional tactile haptic feedback.</li>
+            <li><strong>Banner Ads:</strong> Displayed at the bottom of eligible game screens (permanently disabled when the <em>Remove Ads (Lifetime)</em> upgrade is purchased).</li>
+            <li><strong>Interstitial Ads:</strong> Displayed at level transitions after a randomized interval of 5 to 7 completed Math Puzzle levels (permanently disabled when the <em>Remove Ads (Lifetime)</em> upgrade is purchased).</li>
+            <li><strong>Optional Rewarded Video Ads:</strong> User-initiated video advertisements that players may voluntarily watch to earn in-game rewards, including:
+                <ul>
+                    <li>Earning <strong>+1 Free Hint</strong> token in the Hint Shop / Hint Dialog.</li>
+                    <li>Doubling Stars earned on a completed Math Puzzle level via the <strong>Watch Ad to Double Stars</strong> option (awards only the additional Stars needed to double 1&rarr;2, 2&rarr;4, or 3&rarr;6, limited to one claim per level).</li>
+                    <li>Shuffling tiles on the 40-tile board or continuing target milestone progression in <strong>Number Merge</strong>.</li>
+                </ul>
+                Rewarded ads are only credited when the ad is watched to completion and Google AdMob delivers a valid reward callback. Optional rewarded ads remain available for players who wish to claim voluntary in-game bonuses even after purchasing Ad Removal.
+            </li>
+        </ul>
+
+        <h3>Data Collected &amp; Shared by Google AdMob</h3>
+        <p>
+            To serve, measure, and prevent fraud in advertisements, the Google Mobile Ads SDK may automatically collect and share the following categories of data with Google and its advertising partners:
+        </p>
+        <ul>
+            <li><strong>Device &amp; Advertising Identifiers:</strong> Google Advertising ID (AAID), app set ID, and device instance identifiers.</li>
+            <li><strong>Location Information:</strong> Approximate (coarse) location inferred from your device's IP address (the App does not request GPS or fine location permissions).</li>
+            <li><strong>App Activity &amp; Ad Interactions:</strong> Ad impressions, ad clicks, video ad completions, and app launch/interaction events.</li>
+            <li><strong>Device &amp; Diagnostic Information:</strong> Device make/model, operating system version, screen size, mobile carrier, language, network connection type, crash logs, and performance diagnostics.</li>
+        </ul>
+        <p>
+            Learn more about how Google collects and processes data:
+            <br>
+            &bull; <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Advertising Policies</a>
+            <br>
+            &bull; <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">How Google Uses Information from Sites or Apps That Use Our Services</a>
+            <br>
+            &bull; <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
+        </p>
+    </section>
+
+    <section>
+        <h2>4. In-App Purchases (Google Play Billing)</h2>
+        <p>
+            Math Puzzle offers optional in-app purchases processed exclusively through the official <strong>Google Play Billing Library</strong>:
+        </p>
+        <ul>
+            <li><strong>Remove Ads (Lifetime) (<code>remove_ads_lifetime</code>):</strong> A one-time non-consumable purchase that permanently removes Banner and Interstitial advertisements. Ownership can be restored across devices signed into the same Google Play account using the <strong>Restore Purchase</strong> button in Settings or the Remove Ads dialog.</li>
+            <li><strong>Consumable Hint Packs:</strong>
+                <ul>
+                    <li><strong>3 Hints Pack (<code>hint_pack_3</code>):</strong> Adds 3 hints to your shared hint balance.</li>
+                    <li><strong>10 Hints Pack (<code>hint_pack_10</code>):</strong> Adds 10 hints to your shared hint balance.</li>
+                    <li><strong>50 Hints Pack (<code>hint_pack_50</code>):</strong> Adds 50 hints to your shared hint balance.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <strong>Payment Security:</strong> All financial transactions and payment methods (credit cards, debit cards, carrier billing, or Google Play balance) are processed directly by <strong>Google Play</strong>. Math Puzzle never accesses, collects, or stores your payment card numbers, bank account details, or billing address. The App receives only non-financial purchase confirmation data from the Google Play Billing API (such as product ID, purchase state, and an opaque purchase token) to unlock your content, acknowledge or consume the purchase with Google Play, and prevent duplicate crediting.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Google Play In-App Review &amp; Store Rating</h2>
+        <p>
+            Math Puzzle integrates the official <strong>Google Play In-App Review API</strong> (<code>com.google.android.play:review</code>) and provides a <strong>Rate Us</strong> option in Settings:
+        </p>
+        <ul>
+            <li><strong>In-App Review Prompt:</strong> After you complete several levels and a cooldown period has passed, the App may request the native Google Play review sheet. The App stores only a local timestamp and completed-level count on your device to enforce cooldown limits and avoid frequent prompts.</li>
+            <li><strong>Rate Us in Settings:</strong> Tapping <em>Rate Us</em> in Settings opens the official Google Play Store listing for Math Puzzle (<code>com.aistudio.mathpuzzle.nxvwzy</code>).</li>
+            <li><strong>Review Data Handling:</strong> Any star rating or written review you submit is collected and processed directly by Google Play under your Google Account in accordance with the <a href="https://play.google.com/about/play-terms/index.html" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a>.</li>
         </ul>
     </section>
 
     <section>
-        <h2>6. Children's Privacy (COPPA)</h2>
+        <h2>6. Your Privacy Controls &amp; Advertising Choices</h2>
         <p>
-            Math Puzzle does not knowingly collect personal information from children under 13. All gameplay state remains solely on the device.
+            You can manage your privacy and advertising preferences at any time:
+        </p>
+        <ul>
+            <li><strong>Reset or Delete Your Advertising ID:</strong> On your Android device, open <strong>Settings &gt; Google &gt; All services &gt; Ads</strong> (or <strong>Settings &gt; Privacy &gt; Ads</strong>) and select <em>"Reset advertising ID"</em> or <em>"Delete advertising ID"</em>.</li>
+            <li><strong>Opt Out of Personalized Ads:</strong> Manage your Google ad personalization preferences at <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">adssettings.google.com</a>.</li>
+            <li><strong>Remove Banner &amp; Interstitial Ads:</strong> You may purchase the one-time <em>Remove Ads (Lifetime)</em> upgrade inside the App to disable all banner and level-transition interstitial advertisements.</li>
+            <li><strong>Reset Local Game Data:</strong> Open <strong>Settings &gt; Reset Progress</strong> in the App to clear your local level progress, Stars, and IQ score, or clear the App's storage in Android Settings.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>7. Device Permissions Used</h2>
+        <p>
+            Math Puzzle requests only the permissions strictly necessary for its features:
+        </p>
+        <ul>
+            <li><code>android.permission.INTERNET</code> &amp; <code>android.permission.ACCESS_NETWORK_STATE</code>: Required to load Google AdMob advertisements, verify network availability, and communicate with Google Play Billing and Google Play Services.</li>
+            <li><code>com.android.vending.BILLING</code>: Required to offer optional in-app purchases (Remove Ads and Hint Packs) and restore purchases via Google Play Billing.</li>
+            <li><code>android.permission.VIBRATE</code>: Used solely for optional tactile haptic feedback during gameplay (can be turned off at any time in Settings).</li>
+        </ul>
+        <p>
+            Math Puzzle does <strong>not</strong> request access to your camera, microphone, contacts, photos/media files, phone state, or precise GPS location.
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Data Security &amp; Retention</h2>
+        <p>
+            All network communications conducted by integrated Google SDKs (Google AdMob, Google Play Billing, and Google Play Services) are transmitted over encrypted HTTPS/TLS channels. Local gameplay records remain on your device until you reset progress in Settings, clear app data, or uninstall the App. Data collected by Google SDKs is retained and managed by Google in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Children's Privacy</h2>
+        <p>
+            Math Puzzle is a general-audience math and logic puzzle game. We do not knowingly solicit or collect personally identifiable contact information from children under the age of 13 (or the applicable age of digital consent in your jurisdiction). If you are a parent or guardian and have any concerns or believe that personal information has been inadvertently provided, please contact us at the email address below so we can assist you promptly.
+        </p>
+    </section>
+
+    <section>
+        <h2>10. Changes to This Privacy Policy</h2>
+        <p>
+            We may update this Privacy Policy from time to time to reflect new game features, SDK updates, or legal and Google Play policy requirements. Any updates will be published on this page and inside the App with an updated "Last Updated" date.
         </p>
     </section>
 
     <div class="contact-box">
-        <h3 style="color: #ffffff; margin-bottom: 6px;">Questions & Inquiries</h3>
+        <h3 style="color: #ffffff; margin-bottom: 6px; margin-top: 0;">11. Contact the Developer</h3>
         <p style="margin-bottom: 10px; color: var(--text-muted); font-size: 13px;">
-            For privacy inquiries or support, contact us directly:
+            If you have any questions, concerns, or requests regarding this Privacy Policy, data handling, or support for <strong>Math Puzzle</strong>, please contact the developer at:
         </p>
         <a href="mailto:wa.game.spport@gmail.com">wa.game.spport@gmail.com</a>
     </div>
